@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MercanciaController;
+use App\Models\Mercancia;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/mercancias', function (){
-    return view('Mercancias.formulario');
-});
+Route::resource('mercancias', MercanciaController::class);
 
 Route::get('/usuarios/registrar', function (){
     return view('Usuarios.formulario');
