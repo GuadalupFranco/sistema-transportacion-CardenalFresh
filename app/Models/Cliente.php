@@ -20,4 +20,8 @@ class Cliente extends Model
         'telefono'
     ];
 
+    public function pedido(){
+        return $this->hasMany(Pedido::class);
+    }
+
 }

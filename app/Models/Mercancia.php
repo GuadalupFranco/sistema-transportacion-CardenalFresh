@@ -22,4 +22,8 @@ class Mercancia extends Model
         return $this->belongsTo(TipoMercancia::class);
     }
 
+    public function pedido(){
+        return $this->hasMany(Pedido::class);
+    }
+
 }

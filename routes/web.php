@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\MercanciaController;
+use App\Http\Controllers\PedidoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,7 @@ Route::get('/', function () {
 
 Route::resource('mercancias', MercanciaController::class);
 Route::resource('clientes', ClienteController::class);
+Route::resource('pedidos', PedidoController::class)->only('index');
 
 Route::get('/usuarios/registrar', function (){
     return view('Usuarios.formulario');
