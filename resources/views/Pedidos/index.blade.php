@@ -1,12 +1,12 @@
 @extends('plantilla')
 
 @section('contenido')
-    <h3 class="text-center mb-4">Pedidos</h3>
+    <h2 class="text-center mb-4">Pedidos</h2>
     <div class="row">
         @forelse ($pedidos as $pedido)
         <div class="col-md-4">
             <div class="card">
-                <h5 class="card-header text-center">{{$pedido->mercancia->descripcion}}</h5>
+                <h5 class="card-header text-center text-white bg-dark bg-opacity-50">{{$pedido->mercancia->descripcion}}</h5>
                 <div class="card-body text-center">
                     <h6>Precio:</h6>
                     <p>${{$pedido->mercancia->precio}}</p>

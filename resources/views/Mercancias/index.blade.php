@@ -3,7 +3,7 @@
 @section('contenido')
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#crearMercancia">Nueva mercancia</button>
     <div class="card">
-        <div class="card-header text-center">
+        <div class="card-header text-center bg-dark text-white">
             <h2>Mercancias</h2>
         </div>
         <div class="card-body">
@@ -31,12 +31,14 @@
 
                                 <a href="#" class="btn btn-outline-warning" role="button"
                                     data-bs-target="#editarMercancia-{{ $mercancia->id }}" data-bs-toggle="modal">
+                                    <i class="bi bi-pencil"></i>
                                     Editar
                                 </a>
 
                                 <form method="POST" action=" {{ route('mercancias.destroy', $mercancia->id) }} ">
                                     @csrf @method('DELETE')
                                     <button type="submit" class="btn btn-outline-danger mx-2 confirmarEliminar">
+                                        <i class="bi bi-trash"></i>
                                         Eliminar
                                     </button>
                                 </form>
